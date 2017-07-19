@@ -1,1 +1,1 @@
-# apollo-express-ts-server-boilerplate
+# apollo-express-ts-server-boilerplate [![Build Status](https://travis-ci.org/FinalDes/apollo-express-ts-server-boilerplate.svg?branch=master)](https://travis-ci.org/FinalDes/apollo-express-ts-server-boilerplate)
