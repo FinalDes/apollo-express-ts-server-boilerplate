@@ -1,4 +1,4 @@
-import { makeExecutableSchema } from 'graphql-tools';
+import { makeExecutableSchema } from "graphql-tools";
 
 const typeDefs = `
   type Query{
@@ -10,11 +10,11 @@ const resolvers = {
   Query: {
     hi: () => {
       return "Hello World";
-    }
-  }
-}
+    },
+  },
+};
 
 export const schema = makeExecutableSchema({
+  resolvers,
   typeDefs,
-  resolvers
 });

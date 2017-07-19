@@ -7,7 +7,8 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts'"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
@@ -15,11 +16,13 @@
     "@types/helmet": "^0.0.35",
     "dotenv": "^4.0.0",
     "nodemon": "^1.11.0",
+    "tslint": "^5.5.0",
     "typescript": "^2.4.1"
   },
   "repository": {
-     "type": "git",
-     "url": "https://github.com/FinalDes/apollo-express-ts-server-boilerplate.git" },
+    "type": "git",
+    "url": "https://github.com/FinalDes/apollo-express-ts-server-boilerplate.git"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
