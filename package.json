@@ -17,6 +17,9 @@
     "nodemon": "^1.11.0",
     "typescript": "^2.4.1"
   },
+  "repository": {
+     "type": "git",
+     "url": "https://github.com/FinalDes/apollo-express-ts-server-boilerplate.git" },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
