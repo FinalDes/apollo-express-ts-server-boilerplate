@@ -43,5 +43,27 @@
     "graphql-server-express": "^1.0.2",
     "graphql-tools": "^1.1.0",
     "helmet": "^3.6.1"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "src/**/*.test.ts"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "text-lcov",
+      "json",
+      "html"
+    ],
+    "sourceMap": true,
+    "instrument": true
   }
 }
