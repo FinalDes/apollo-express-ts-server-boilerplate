@@ -1,18 +1,6 @@
 import { makeExecutableSchema } from "graphql-tools";
-
-const typeDefs = `
-  type Query{
-    hi: String
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hi: () => {
-      return "Hello World";
-    },
-  },
-};
+import {resolvers} from "./schema/resolvers";
+import {typeDefs} from "./schema/typeDefs";
 
 export const schema = makeExecutableSchema({
   resolvers,
