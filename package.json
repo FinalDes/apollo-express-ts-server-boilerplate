@@ -5,17 +5,17 @@
   "author": "Alex Alonso <alex4551@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon ./src/server.js --exec babel-node -e js",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-plugin-transform-async-generator-functions": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.23.0",
+    "@types/body-parser": "^1.16.4",
+    "@types/dotenv": "^4.0.0",
+    "@types/helmet": "^0.0.35",
     "dotenv": "^4.0.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "typescript": "^2.4.1"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
@@ -23,6 +23,6 @@
     "graphql": "^0.10.5",
     "graphql-server-express": "^1.0.2",
     "graphql-tools": "^1.1.0",
-    "mongoose": "^4.11.3"
+    "helmet": "^3.6.1"
   }
 }

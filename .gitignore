@@ -1,3 +1,5 @@
 node_modules/
 .env
 .vagrant/
+yarn-error.log
+dist/
