@@ -3,3 +3,4 @@ node_modules/
 .vagrant/
 yarn-error.log
 dist/
+coverage/

@@ -1,6 +1,6 @@
 import express = require("express");
 import bodyParser = require("body-parser");
-import helmet = require("helmet");
+// import helmet = require("helmet");
 import { graphiqlExpress, graphqlExpress } from "graphql-server-express";
 import {welcomeQuery} from "./graphiQL_welcome_query";
 import {schema} from "./schema";
@@ -11,7 +11,7 @@ dotenv.config();
 const PORT = process.env.PORT;
 const app = express();
 
-app.use(helmet());
+// app.use(helmet());
 app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
 app.use("/graphiql", graphiqlExpress({
   endpointURL: "/graphql",

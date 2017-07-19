@@ -7,19 +7,27 @@
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "start": "nodemon --config nodemon.json",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "tslint": "tslint -c tslint.json 'src/**/*.ts'"
+    "test": "mocha --opts ./mocha.opts",
+    "test:coverage": "nyc yarn test",
+    "test:coverage:showReport": "yarn test:coverage && open coverage/index.html",
+    "test:coveralls": "yarn test:coverage | coveralls",
+    "tslint": "tslint -c tslint.json 'src/**/*.ts' 'test/*.ts'"
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
+    "@types/chai": "^4.0.1",
     "@types/dotenv": "^4.0.0",
     "@types/helmet": "^0.0.35",
-    "@types/jest": "^20.0.4",
+    "@types/mocha": "^2.2.41",
+    "@types/supertest": "^2.0.2",
+    "chai": "^4.1.0",
+    "coveralls": "^2.13.1",
     "dotenv": "^4.0.0",
-    "jest": "^20.0.4",
+    "mocha": "^3.4.2",
+    "mocha-tslint": "^0.3.0",
     "nodemon": "^1.11.0",
-    "ts-jest": "^20.0.7",
+    "nyc": "^11.0.3",
+    "supertest": "^3.0.0",
     "ts-node": "^3.2.0",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
@@ -35,18 +43,5 @@
     "graphql-server-express": "^1.0.2",
     "graphql-tools": "^1.1.0",
     "helmet": "^3.6.1"
-  },
-  "jest": {
-    "roots": [
-      "<rootDir>/test"
-    ],
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "(/*\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ]
   }
 }
