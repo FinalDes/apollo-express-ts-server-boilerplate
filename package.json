@@ -8,7 +8,7 @@
     "build": "tsc -p tsconfig.json",
     "test": "jest",
     "test:coverage": "rm -rf coverage && jest --coverage",
-    "test:coveralls": "test:coverage | coveralls",
+    "test:coveralls": "yarn test:coverage && cat ./coverage/lcov.info | coveralls",
     "test:showCoverage": "yarn test:coverage && open coverage/lcov-report/index.html",
     "test:watch": "jest --watch",
     "start": "nodemon --config nodemon.json",
