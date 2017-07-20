@@ -7,7 +7,7 @@ import {welcomeQuery} from "./graphiQL_welcome_query";
 import {schema} from "./schema";
 
 const app = express();
-// app.use(helmet());
+app.use(helmet());
 app.use("/graphql", bodyParser.json(), graphqlExpress({ schema }));
 app.use("/graphiql", graphiqlExpress({
   endpointURL: "/graphql",
