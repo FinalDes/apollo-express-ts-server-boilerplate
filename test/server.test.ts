@@ -2,7 +2,7 @@
 /* tslint:disable:no-unused-expression*/
 import {expect, should} from "chai";
 import request = require("supertest");
-import app from "./../src/server";
+import app from "./../src/app";
 should();
 
 const result = {data: {hi: "Hello World"}};
