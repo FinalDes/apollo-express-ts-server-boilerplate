@@ -1,9 +1,9 @@
 /* tslint:disable:no-console*/
 /* tslint:disable:no-unused-expression*/
-import {expect, should} from "chai";
+// import {expect, should} from "chai";
 import request = require("supertest");
 import app from "./../src/app";
-should();
+// should();
 
 const result = {data: {hi: "Hello World"}};
 
@@ -15,9 +15,9 @@ describe("Graphql test", () => {
     .send({query: "{hi}"})
     .expect(200)
     .end((err, res) => {
-      console.log(err);
-      expect(err).to.be.null;
-      res.body.should.to.deep.equal(result);
+      expect(err).toBe(null);
+      expect(res.body).toEqual(result);
+      // res.body.should.to.deep.equal(result);
       done();
     });
   });
