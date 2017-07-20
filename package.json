@@ -18,6 +18,7 @@
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
     "@types/dotenv": "^4.0.0",
+    "@types/helmet": "^0.0.35",
     "@types/jest": "^20.0.4",
     "@types/supertest": "^2.0.2",
     "coveralls": "^2.13.1",
@@ -41,7 +42,8 @@
     "express": "^4.15.3",
     "graphql": "^0.10.5",
     "graphql-server-express": "^1.0.2",
-    "graphql-tools": "^1.1.0"
+    "graphql-tools": "^1.1.0",
+    "helmet": "^3.6.1"
   },
   "jest": {
     "transform": {
@@ -50,7 +52,8 @@
     "testRegex": "(tests/.*|\\.(test|spec))\\.ts$",
     "moduleFileExtensions": [
       "ts",
-      "js"
+      "js",
+      "json"
     ]
   }
 }
