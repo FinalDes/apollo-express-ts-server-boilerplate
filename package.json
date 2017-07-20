@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "nsp": "nsp check",
     "test": "jest",
     "test:coverage": "rm -rf coverage && jest --coverage",
     "test:coveralls": "yarn test:coverage && cat ./coverage/lcov.info | coveralls",
@@ -24,6 +25,7 @@
     "dotenv": "^4.0.0",
     "jest": "^20.0.4",
     "nodemon": "^1.11.0",
+    "nsp": "^2.6.3",
     "supertest": "^3.0.0",
     "ts-jest": "^20.0.7",
     "ts-node": "^3.2.0",

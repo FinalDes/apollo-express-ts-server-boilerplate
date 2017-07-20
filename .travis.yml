@@ -4,6 +4,7 @@ node_js:
   - "7"
   - "6"
 script:
+  - nsp check
   - yarn tslint
   - yarn test:coveralls
 cache:
