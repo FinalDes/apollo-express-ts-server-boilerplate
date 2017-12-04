@@ -5,7 +5,7 @@
   "author": "Alex Alonso <alex4551@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "build": "del-cli dist && webpack --config webpack.config.js --progress --profile --bail",
     "nsp": "nsp check",
     "test": "jest",
     "test:coverage": "del-cli coverage && jest --coverage",
@@ -18,9 +18,12 @@
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
     "@types/dotenv": "^4.0.0",
+    "@types/graphql": "^0.11.7",
     "@types/helmet": "^0.0.37",
     "@types/jest": "^21.1.8",
     "@types/supertest": "^2.0.2",
+    "awesome-typescript-loader": "^3.4.1",
+    "babel-minify-webpack-plugin": "^0.2.0",
     "coveralls": "^3.0.0",
     "del-cli": "^1.1.0",
     "dotenv": "^4.0.0",
@@ -31,13 +34,16 @@
     "ts-jest": "^21.2.4",
     "ts-node": "^3.2.0",
     "tslint": "^5.5.0",
-    "typescript": "^2.4.1"
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.4.1",
+    "webpack": "^3.9.1"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/FinalDes/apollo-express-ts-server-boilerplate.git"
   },
   "dependencies": {
+    "apollo-link": "^1.0.5",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "graphql": "^0.11.1",

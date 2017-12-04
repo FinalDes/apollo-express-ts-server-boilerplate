@@ -1,7 +1,7 @@
-import express = require("express");
 import bodyParser = require("body-parser");
-import helmet = require("helmet");
+import express = require("express");
 import { graphiqlExpress, graphqlExpress } from "graphql-server-express";
+import helmet = require("helmet");
 
 import {welcomeQuery} from "./graphiQL_welcome_query";
 import {schema} from "./schema";
