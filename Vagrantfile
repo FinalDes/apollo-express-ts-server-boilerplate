@@ -1,7 +1,7 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 Vagrant.configure("2") do |config|
-  config.vm.box = "ubuntuServer16-04-2"
+  config.vm.box = "ubuntuServer-16.04.3"
   config.vm.synced_folder ".", "/home/vagrant/site", type: "nfs"
   config.vm.provider "vmware_fusion" do |vmware|
     vmware.vmx["memsize"] = "2048"
