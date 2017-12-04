@@ -18,17 +18,17 @@
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
     "@types/dotenv": "^4.0.0",
-    "@types/helmet": "^0.0.36",
-    "@types/jest": "^20.0.4",
+    "@types/helmet": "^0.0.37",
+    "@types/jest": "^21.1.8",
     "@types/supertest": "^2.0.2",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "del-cli": "^1.1.0",
     "dotenv": "^4.0.0",
-    "jest": "^20.0.4",
+    "jest": "^21.1.8",
     "nodemon": "^1.11.0",
-    "nsp": "^2.6.3",
+    "nsp": "^3.1.0",
     "supertest": "^3.0.0",
-    "ts-jest": "^20.0.7",
+    "ts-jest": "^21.2.4",
     "ts-node": "^3.2.0",
     "tslint": "^5.5.0",
     "typescript": "^2.4.1"
@@ -42,7 +42,7 @@
     "express": "^4.15.3",
     "graphql": "^0.11.1",
     "graphql-server-express": "^1.0.2",
-    "graphql-tools": "^1.1.0",
+    "graphql-tools": "^2.11.0",
     "helmet": "^3.6.1"
   },
   "jest": {
