@@ -1,4 +1,0 @@
-- name: mongodb
-  src: https://github.com/FinalDes/ansible-mongodb.git
-  scm: git
-  version: master
