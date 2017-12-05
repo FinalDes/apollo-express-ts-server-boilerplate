@@ -21,4 +21,17 @@ describe("Graphql test", () => {
       done();
     });
   });
+  it("Get Hi, content-type application/graphql", (done) => {
+    request(app)
+    .post("/graphql")
+    .set("Content-Type", "application/graphql; charset=UTF-8")
+    .send("{hi}")
+    .expect(200)
+    .end((err, res) => {
+      expect(err).toBe(null);
+      expect(res.body).toEqual(result);
+      // res.body.should.to.deep.equal(result);
+      done();
+    });
+  });
 });
