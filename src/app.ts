@@ -11,7 +11,7 @@ const app = express();
 const helperMiddleware = [
   bodyParser.json(),
   bodyParser.text({ type: "application/graphql" }),
-  (req: any, res: any, next: any) => {
+  (req: express.Request, res: express.Response, next: any) => {
       if (req.is("application/graphql")) {
           req.body = { query: req.body };
       }

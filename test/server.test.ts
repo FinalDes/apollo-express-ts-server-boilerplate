@@ -15,7 +15,7 @@ describe("Graphql test", () => {
     .send({query: "{hi}"})
     .expect(200)
     .end((err, res) => {
-      expect(err).toBe(null);
+      expect(err).toBeNull();
       expect(res.body).toEqual(result);
       // res.body.should.to.deep.equal(result);
       done();
@@ -28,10 +28,22 @@ describe("Graphql test", () => {
     .send("{hi}")
     .expect(200)
     .end((err, res) => {
-      expect(err).toBe(null);
+      expect(err).toBeNull();
       expect(res.body).toEqual(result);
       // res.body.should.to.deep.equal(result);
       done();
     });
+  });
+  it("Check headers", (done) => {
+    request(app)
+      .post("/graphql")
+      .set("Content-Type", "application/graphql; charset=UTF-8")
+      .send("{hi}")
+      .expect(200)
+      .end((err, res) => {
+        expect(err).toBeNull();
+        expect(res.header["x-powered-by"]).toBeUndefined();
+        done();
+      });
   });
 });
