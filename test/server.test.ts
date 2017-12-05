@@ -23,15 +23,15 @@ describe("Graphql test", () => {
   });
   it("Get Hi, content-type application/graphql", (done: jest.DoneCallback) => {
     request(app)
-    .post("/graphql")
-    .set("Content-Type", "application/graphql; charset=UTF-8")
-    .send("{hi}")
-    .expect(200)
-    .end((err, res: request.Response) => {
-      expect(err).toBeNull();
-      expect(res.body).toEqual(result);
-      // res.body.should.to.deep.equal(result);
-      done();
+      .post("/graphql")
+      .set("Content-Type", "application/graphql; charset=UTF-8")
+      .send("{hi}")
+      .expect(200)
+      .end((err, res: request.Response) => {
+        expect(err).toBeNull();
+        expect(res.body).toEqual(result);
+        // res.body.should.to.deep.equal(result);
+        done();
     });
   });
   it("Check headers", (done: jest.DoneCallback) => {
