@@ -5,6 +5,28 @@
 
 initial Apollo GraphQL server for Express
 
+## Getting Started
+
+Please remove test/graphq.test.ts when modify the code, the test/graphql.test.ts is to test initial server setup works.
+
+### Setup
+
+``` bash
+yarn install
+```
+
+### Runing in dev server
+
+``` bash
+yarn start
+```
+
+### Running test
+
+``` bash
+yarn test
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
