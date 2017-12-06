@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@types/body-parser": "^1.16.4",
+    "@types/cors": "^2.8.3",
     "@types/dotenv": "^4.0.0",
     "@types/graphql": "^0.11.7",
     "@types/helmet": "^0.0.37",
@@ -45,6 +46,7 @@
   "dependencies": {
     "apollo-link": "^1.0.5",
     "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "graphql": "^0.11.1",
     "graphql-server-express": "^1.0.2",

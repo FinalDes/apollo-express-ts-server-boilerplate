@@ -1,4 +1,5 @@
 import bodyParser = require("body-parser");
+import cors = require("cors");
 import express = require("express");
 import { graphiqlExpress, graphqlExpress } from "graphql-server-express";
 import helmet = require("helmet");
@@ -18,8 +19,8 @@ const helperMiddleware: express.RequestHandler[] = [
       next();
   },
 ];
-
-app.use(helmet());
+app.disable("x-powered-by");
+app.use(cors());
 app.use("/graphql", ...helperMiddleware, graphqlExpress({ schema }));
 app.use("/graphiql", graphiqlExpress({
   endpointURL: "/graphql",
