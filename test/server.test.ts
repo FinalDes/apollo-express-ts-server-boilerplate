@@ -21,8 +21,6 @@ describe("server test", () => {
       .end((err, res: request.Response) => {
         expect(err).toBeNull();
         expect(res.header["access-control-allow-methods"]).toBe("POST");
-        // console.log(err);
-        console.log(res);
         done();
       });
 
