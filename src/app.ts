@@ -25,9 +25,8 @@ const helperMiddleware: express.RequestHandler[] = [
       next();
   },
 ];
-app.disable("x-powered-by");
+app.use(helmet());
 app.use("/graphql", ...helperMiddleware, graphqlExpress({ schema }));
-console.log(process.env.PRODUCTION);
 if (!process.env.PRODUCTION) {
   app.use("/graphiql", graphiqlExpress({
     endpointURL: "/graphql",
