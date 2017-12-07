@@ -1,4 +1,5 @@
 import bodyParser = require("body-parser");
+import compression = require("compression");
 import cors = require("cors");
 import dotenv = require("dotenv");
 import express = require("express");
@@ -26,6 +27,7 @@ const helperMiddleware: express.RequestHandler[] = [
   },
 ];
 app.use(helmet());
+app.use(compression());
 app.use("/graphql", ...helperMiddleware, graphqlExpress({ schema }));
 if (!process.env.PRODUCTION) {
   app.use("/graphiql", graphiqlExpress({
