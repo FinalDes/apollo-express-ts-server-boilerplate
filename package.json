@@ -50,7 +50,7 @@
     "compression": "^1.7.1",
     "cors": "^2.8.4",
     "express": "^4.15.3",
-    "graphql": "^0.11.1",
+    "graphql": "^0.12.0",
     "graphql-server-express": "^1.0.2",
     "graphql-tools": "^2.11.0",
     "helmet": "^3.6.1"
