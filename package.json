@@ -38,7 +38,7 @@
     "tslint": "^5.5.0",
     "tslint-loader": "^3.5.3",
     "typescript": "^2.4.1",
-    "webpack": "^3.10.0"
+    "webpack": "^4.0.0"
   },
   "repository": {
     "type": "git",
