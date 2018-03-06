@@ -24,7 +24,7 @@
     "@types/helmet": "^0.0.37",
     "@types/jest": "^22.0.0",
     "@types/supertest": "^2.0.2",
-    "awesome-typescript-loader": "^3.4.1",
+    "awesome-typescript-loader": "^4.0.0",
     "babel-minify-webpack-plugin": "^0.2.0",
     "coveralls": "^3.0.0",
     "del-cli": "^1.1.0",
