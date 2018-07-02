@@ -1,45 +1,28 @@
-const path = require("path");
-const fs = require("fs");
-const MinifyPlugin = require("babel-minify-webpack-plugin");
-
-const nodeModules = {};
-fs.readdirSync("node_modules")
-  .filter(x => [".bin"].indexOf(x) === -1)
-  .forEach((mod) => {
-    nodeModules[mod] = `commonjs ${mod}`;
-  });
+const path = require('path');
+const { CheckerPlugin } = require('awesome-typescript-loader')
 
 module.exports = {
-  target: "node",
-  entry: "./src/server.ts",
-  output: {
-    filename: "index.js",
-    path: path.resolve(__dirname, "dist"),
-  },
-  resolve: {
-    extensions: [".ts", ".js"],
-  },
+  mode: 'production',
+  entry: './src/server.ts',
   module: {
     rules: [
       {
-        enforce: "pre",
         test: /\.tsx?$/,
-        loader: "tslint-loader",
-        exclude: /node_modules/,
-        options: {
-          emitErrors: false,
-          failOnHint: true,
-          tsConfigFile: "tsconfig.json",
-        },
-      },
-      {
-        test: /\.tsx?$/,
-        loader: "awesome-typescript-loader",
-      },
-    ],
+        use: 'awesome-typescript-loader',
+        exclude: /node_modules/
+      }
+    ]
   },
-  externals: nodeModules,
+  resolve: {
+    extensions: ['.ts', '.js' ],
+    mainFields:["main"],
+  },
+  target: 'async-node',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
   plugins: [
-    new MinifyPlugin(),
-  ],
+    new CheckerPlugin()
+  ]
 };
