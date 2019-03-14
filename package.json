@@ -41,7 +41,7 @@
     "url": "https://github.com/FinalDes/apollo-express-ts-server-boilerplate.git"
   },
   "dependencies": {
-    "apollo-link": "^ 1.2.3",
+    "apollo-link": "^1.2.11",
     "body-parser": "^1.17.2",
     "compression": "^1.7.3",
     "cors": "^2.8.5",
