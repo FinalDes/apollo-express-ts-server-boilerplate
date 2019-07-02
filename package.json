@@ -47,7 +47,7 @@
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "graphql": "^0.13.2",
-    "graphql-server-express": "^1.4.0",
+    "graphql-server-express": "^1.4.1",
     "graphql-tools": "^4.0.3",
     "helmet": "^3.14.0"
   },
