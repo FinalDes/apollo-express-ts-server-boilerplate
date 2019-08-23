@@ -20,7 +20,7 @@
     "@types/compression": "^0.0.36",
     "@types/cors": "^2.8.3",
     "@types/dotenv": "^6.1.0",
-    "@types/graphql": "^0.13.4",
+    "@types/graphql": "^14.5.0",
     "@types/helmet": "^0.0.42",
     "@types/jest": "^23.3.9",
     "@types/supertest": "^2.0.6",
